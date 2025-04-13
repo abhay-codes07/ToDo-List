@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <div class="header-section">
+                <h1>Todo List <i class="fas fa-check-circle"></i></h1>
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="analytics-dashboard">
+                <h2>Weekly Analytics</h2>
+                <div class="chart-container">
+                    <div class="chart">
+                        <div class="bar-container" data-day="Mon">
+                            <div class="bar" style="height: 0%"></div>
+                        </div>
+                        <div class="bar-container" data-day="Tue">
+                            <div class="bar" style="height: 0%"></div>
+                        </div>
+                        <div class="bar-container" data-day="Wed">
+                            <div class="bar" style="height: 0%"></div>
+                        </div>
+                        <div class="bar-container" data-day="Thu">
+                            <div class="bar" style="height: 0%"></div>
+                        </div>
+                        <div class="bar-container" data-day="Fri">
+                            <div class="bar" style="height: 0%"></div>
+                        </div>
+                        <div class="bar-container" data-day="Sat">
+                            <div class="bar" style="height: 0%"></div>
+                        </div>
+                        <div class="bar-container" data-day="Sun">
+                            <div class="bar" style="height: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="analytics-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">High Priority</span>
+                        <span class="stat-value" id="high-priority-count">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Medium Priority</span>
+                        <span class="stat-value" id="medium-priority-count">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Low Priority</span>
+                        <span class="stat-value" id="low-priority-count">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="performance-bar-container">
+                <div class="performance-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="performance-stats">
+                    <span class="completion-percentage">0%</span>
+                    <span class="total-tasks">Total Tasks: 0</span>
+                </div>
+            </div>
+            <div class="input-section">
+                <input type="text" id="task-input" placeholder="Add your task...">
+                <select id="priority-select" class="priority-select">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button id="add-btn">Add</button>
+            </div>
+            <ul id="task-list"></ul>
+            <div class="footer">
+                <span id="tasks-counter">0 tasks remaining</span>
+                <button id="clear-completed">Clear Completed</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
